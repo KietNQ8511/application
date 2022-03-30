@@ -177,7 +177,7 @@ export default function PrimarySearchAppBar() {
                 component="div"
                 sx={{ display: { xs: 'none', sm: 'block' } }}
               >
-                Bedsit rental Đà Nẵng
+                House Rental Đà Nẵng
               </Typography>
               <Search>
                 <SearchIconWrapper>
