@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import { Box, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import { Box, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 
 import { Typography } from '@mui/material';
 
-import Logo from '../../../img/LogoHouse.jpg';
+import Logo from '../../../img/Logo.PNG';
 
 import Grid from '@mui/material/Grid';
 
@@ -21,7 +21,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
     root: {
-      height: '47vh',
+        height: '47vh'
     },
     icon: {
         height: 24,
@@ -29,21 +29,24 @@ const useStyles = makeStyles({
         marginLeft: 10
     },
     mt: {
-        marginTop: 15,
+        marginTop: 15
     }
-  });
-
+});
 
 const Footer = () => {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Grid container textAlign='left' item xs={12}>
+            <Grid container textAlign="left" item xs={12}>
                 <Grid xs={2} sx={{ background: '#bbdefb' }} />
                 <Grid item xs={4} sx={{ background: '#bbdefb' }}>
-                    <img src={Logo} alt="logo" />
+                    <img
+                        width={300}
+                        src={Logo}
+                        alt="logo"
+                    />
                 </Grid>
-                <Grid item xs={4} sx={{ background: '#bbdefb'}}>
+                <Grid item xs={4} sx={{ background: '#bbdefb' }}>
                     <Box
                         sx={{
                             display: 'flex',
@@ -52,7 +55,7 @@ const Footer = () => {
                             justifyContent: 'flex-end',
                             m: 1,
                             height: 100,
-                            borderRadius: 1,
+                            borderRadius: 1
                         }}
                     >
                         <FacebookIcon color="primary" />
@@ -65,10 +68,10 @@ const Footer = () => {
             </Grid>
             {/* ****************************************************************** */}
             <Grid container item xs={12}>
-                <Grid container item sx={{ background: '#bbdefb'}}>
+                <Grid container item sx={{ background: '#bbdefb' }}>
                     <Grid item xs={2} />
-                    <Grid item xs={3} textAlign='left'>
-                        <Typography alignItems="left" fontSize={16} sx={{fontWeight: 'bold'}}>
+                    <Grid item xs={3} textAlign="left">
+                        <Typography alignItems="left" fontSize={16} sx={{ fontWeight: 'bold' }}>
                             Contact Us
                         </Typography>
                         <List>
@@ -80,7 +83,7 @@ const Footer = () => {
                                     <ListItemText primary="Đà Nẵng" />
                                 </ListItemButton>
                             </ListItem>
-                            <ListItem >
+                            <ListItem>
                                 <ListItemButton>
                                     <ListItemIcon>
                                         <EmailIcon />
@@ -102,33 +105,35 @@ const Footer = () => {
                         </List>
                     </Grid>
                     <Grid item xs={2}>
-                        <Typography alignItems="left" fontSize={16} sx={{fontWeight: 'bold'}}>
+                        <Typography alignItems="left" fontSize={16} sx={{ fontWeight: 'bold' }}>
                             Fill Form to contact me
                         </Typography>
                         <div className={classes.mt}>
                             <input class="form-control form-control-lg" type="text" placeholder="Name" />
                         </div>
-                        <div className={classes.mt} >
+                        <div className={classes.mt}>
                             <input class="form-control form-control-lg" type="text" placeholder="Email" />
                         </div>
                         <div className={classes.mt}>
                             <input class="form-control form-control-lg" type="text" placeholder="Phone" />
                         </div>
                         <div className={classes.mt}>
-                            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                            <button type="submit" class="btn btn-primary mb-2">
+                                Submit
+                            </button>
                         </div>
                     </Grid>
                     <Grid item xs={3}>
-                        <Typography alignItems="left" fontSize={16} sx={{fontWeight: 'bold'}}>
+                        <Typography alignItems="left" fontSize={16} sx={{ fontWeight: 'bold' }}>
                             Quick link
                         </Typography>
                         <Link href="/">Facebook</Link>
-                        </Grid>
+                    </Grid>
                     <Grid item xs={2} />
                 </Grid>
             </Grid>
         </React.Fragment>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
